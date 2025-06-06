@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# 🥤 VendingMachine App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack vending machine simulation app built with **React**, **Flask**, and **PostgreSQL**. Users can interact with a virtual vending machine frontend while the backend handles data via a REST API and database.
 
-## Available Scripts
+## 🚀 Tech Stack
 
-In the project directory, you can run:
+- **Frontend:** React.js, TailwindCSS  
+- **Backend:** Flask (Python), Flask-RESTful  
+- **Database:** PostgreSQL  
+- **Tools:** pgAdmin, psycopg2, VS Code  
 
-### `npm start`
+## 🖥 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎯 Interactive vending machine UI  
+- 💾 Persistent product data with PostgreSQL  
+- 🔄 REST API powered by Flask  
+- ⚙️ Backend SQL utility functions for automation  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Getting Started
 
-### `npm test`
+### 📌 Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Python 3.11+  
+- Node.js + npm  
+- PostgreSQL 14+  
+- VS Code or similar IDE  
+- pgAdmin (optional for DB UI)  
 
-### `npm run build`
+### 🔧 Backend Setup (Flask)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Create a `db.yml` file inside the `api/` directory with your own PostgreSQL credentials:
+   ```yaml
+   host: localhost
+   database: your_database_name
+   user: your_database_user
+   password: your_database_password
+   port: 5432
+   ```
+   > 🔒 **Important:** Do not share this file or commit it to version control. Be sure to add `db.yml` to your `.gitignore`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Run the backend server:
+   ```bash
+   python server.py
+   ```
 
-### `npm run eject`
+Access the API at: `http://localhost:5000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🎨 Frontend Setup (React)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Install frontend packages:
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Start the React app:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+View the app in your browser at: `http://localhost:3000`
 
-## Learn More
+## 📍 Note
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project currently runs locally. Deployment is not configured yet.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📬 Contact
 
-### Code Splitting
+Have questions or suggestions?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Created by **Jasmine Rmaidi**  
+- Connect via GitHub or email
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
